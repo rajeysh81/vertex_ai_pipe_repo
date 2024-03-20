@@ -1,0 +1,4 @@
+%%writefile {MODEL_DIR}/requirements.txt
+tf-models-official==2.15.0
+tensorflow-text==2.15.0
+tensorflow-hub==0.16.1
