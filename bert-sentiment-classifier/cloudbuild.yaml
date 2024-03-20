@@ -1,0 +1,10 @@
+cloudbuild_yaml = f"""steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', '{IMAGE_URI}', '.' ]
+images: 
+- '{IMAGE_URI}'"""
+
+print(f"{MODEL_DIR}/cloudbuild.yaml")
+
+with open(f"{MODEL_DIR}/cloudbuild.yaml", "w") as fp:
+    fp.write(cloudbuild_yaml)
